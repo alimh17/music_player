@@ -1,0 +1,27 @@
+.range {
+  width: 40%;
+  height: 20%;
+  position: absolute;
+  right: 90%;
+  top: 10%;
+  background-color: orange;
+  margin: 0 2rem;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 50;
+}
+
+.range > input {
+  transform: rotateZ(270deg);
+  background-color: orange;
+  color: orange;
+  border-radius: 50%;
+}
+
+.range svg {
+  font-size: 2rem;
+  color: orange;
+}
+

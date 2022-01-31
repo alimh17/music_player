@@ -1,25 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { Container, Col, Row } from "react-bootstrap";
 
-function App() {
+import Sidebar from "./components/sidebar/Sidebar";
+import Main from "./components/main/Main";
+
+import "./App.css";
+import MainContext from "./context/MainContext";
+
+const App = () => {
+  const [nowMusic, setNowMusic] = useState([]);
+  const [pause, setPause] = useState(false);
+
+  const handlePlayMusic = (music) => {
+    setNowMusic(music);
+    setPause(true);
+  };
+
+  const handlePauseMusic = () => {
+    setPause(!pause);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <MainContext.Provider
+      value={{
+        play: nowMusic,
+        nowMusic: handlePlayMusic,
+        pause,
+        handlePause: handlePauseMusic,
+      }}
+    >
+      <Container fluid>
+        <Row>
+          <Col md="8">
+            <Main />
+          </Col>
+          <Col md="4">
+            <Sidebar />
+          </Col>
+        </Row>
+      </Container>
+    </MainContext.Provider>
   );
-}
+};
 
 export default App;
