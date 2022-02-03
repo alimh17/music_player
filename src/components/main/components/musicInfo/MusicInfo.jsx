@@ -1,6 +1,4 @@
 import React, { useContext } from "react";
-import { AiOutlinePauseCircle, AiOutlinePlayCircle } from "react-icons/ai";
-import { GiNextButton, GiPreviousButton } from "react-icons/gi";
 
 import MainContext from "../../../../context/MainContext";
 import Controlers from "./components/controlers/Controlers";

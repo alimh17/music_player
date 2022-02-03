@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 
 import MainContext from "../../context/MainContext";
 import { music } from "../../data/data";
