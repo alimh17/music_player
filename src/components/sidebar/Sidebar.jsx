@@ -16,7 +16,7 @@ const Sidebar = () => {
             <li
               key={index}
               className="flex justify-between items-center cursor-pointer rounded-md mt-1 bg-gray-600 round transition-all ease-in duration-300 hover:bg-orange-300
-              selection:bg-orange-300
+              selection:bg-orange-300 opacity-60
               "
               onClick={(e) => nowMusic(item, index)}
             >

@@ -9,7 +9,9 @@ const MusicInfo = () => {
   const { play, pause, handlePause } = useContext(MainContext);
 
   return (
-    <section className="md:fixed mt-10 d-flex flex-column justify-content-center align-items-center">
+    <section
+      className={`md:fixed mt-10 d-flex flex-column justify-content-center align-items-center z-10 ${style.musicInfo}`}
+    >
       <img
         alt="artist"
         src={play[0].image}
