@@ -10,14 +10,19 @@ import MainContext from "./context/MainContext";
 const App = () => {
   const [nowMusic, setNowMusic] = useState([]);
   const [pause, setPause] = useState(false);
+  const [vol, setVol] = useState(0.5);
 
-  const handlePlayMusic = (music , index) => {
-    setNowMusic([music , index]);
+  const handlePlayMusic = (music, index) => {
+    setNowMusic([music, index]);
     setPause(true);
   };
 
   const handlePauseMusic = () => {
     setPause(!pause);
+  };
+
+  const handleVolume = (value) => {
+    setVol(value);
   };
 
   return (
@@ -27,6 +32,8 @@ const App = () => {
         nowMusic: handlePlayMusic,
         pause,
         handlePause: handlePauseMusic,
+        volume: vol,
+        handleVolume: handleVolume,
       }}
     >
       <Container fluid>

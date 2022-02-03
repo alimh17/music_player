@@ -8,6 +8,8 @@ import style from "./main.module.css";
 
 const Main = () => {
   const { play, pause } = useContext(MainContext);
+  const context = useContext(MainContext);
+  const { volume } = context;
 
   return (
     <main className="d-flex flex-column justify-content-start align-items-center">
@@ -22,7 +24,13 @@ const Main = () => {
               className={`${style.image} rounded-xl blur-sm`}
             />
           </div>
-          <ReactPlayer url={play[0].url} playing={pause} height="0" width="0" />
+          <ReactPlayer
+            url={play[0].url}
+            playing={pause}
+            height="0"
+            width="0"
+            volume={volume}
+          />
           <MusicInfo />
         </>
       )}

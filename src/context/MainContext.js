@@ -4,7 +4,9 @@ const MainContext = createContext({
   play: [],
   nowMusic: () => {},
   pause: false,
-  handlePause : () => {}
+  handlePause: () => {},
+  volume: 0.5,
+  handleVolume: () => {},
 });
 
 export default MainContext;
