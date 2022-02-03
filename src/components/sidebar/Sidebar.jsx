@@ -18,7 +18,7 @@ const Sidebar = () => {
               className="flex justify-between items-center cursor-pointer rounded-md mt-1 bg-gray-600 round transition-all ease-in duration-300 hover:bg-orange-300
               selection:bg-orange-300
               "
-              onClick={(e) => nowMusic(item)}
+              onClick={(e) => nowMusic(item, index)}
             >
               <span className="ml-2">
                 <p className="flex-1 text-white lg:text-2xl md:text-2xl sm:text-2xl">

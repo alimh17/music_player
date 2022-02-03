@@ -13,7 +13,7 @@ const Main = () => {
         <NotMusic />
       ) : (
         <>
-          <ReactPlayer url={play.url} playing={pause} height="0" width="0" />
+          <ReactPlayer url={play[0].url} playing={pause} height="0" width="0" />
           <MusicInfo />
         </>
       )}

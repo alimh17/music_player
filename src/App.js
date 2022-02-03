@@ -11,8 +11,8 @@ const App = () => {
   const [nowMusic, setNowMusic] = useState([]);
   const [pause, setPause] = useState(false);
 
-  const handlePlayMusic = (music) => {
-    setNowMusic(music);
+  const handlePlayMusic = (music , index) => {
+    setNowMusic([music , index]);
     setPause(true);
   };
 

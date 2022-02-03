@@ -14,11 +14,11 @@ const MusicInfo = () => {
     <section className="md:fixed mt-10 d-flex flex-column justify-content-center align-items-center">
       <img
         alt="artist"
-        src={play.image}
+        src={play[0].image}
         className={`${style.image} rounded-xl`}
       />
-      <p className="text-center text-white text-2xl">{play.artist}</p>
-      <p className="text-center text-white text-2xl">{play.title}</p>
+      <p className="text-center text-white text-2xl">{play[0].artist}</p>
+      <p className="text-center text-white text-2xl">{play[0].title}</p>
       <Controlers pause={pause} handlePause={handlePause} />
     </section>
   );
